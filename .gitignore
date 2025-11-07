@@ -60,3 +60,6 @@ data/
 # ==========================
 dbt/vendas_temp.csv
 dbt/vendas_tratado.csv
+
+# 🧱 Arquivos gerados pela camada Bronze
+dbt/bronze/*.json
