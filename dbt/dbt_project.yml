@@ -1,0 +1,13 @@
+name: 'new_pipeline_project' #nome do projeto dbt
+version: '1.0.0'
+config-version: 2
+
+profile: 'new_pipeline_profile' #nome da configuração de conexão
+
+model-paths: ["models"] #Onde ficam os modelos SQL
+seed-paths: ["seeds"] #Onde ficam os CSVs para importar
+target-path: "target"
+
+models:
+  new_pipeline_project:
+    +materialized: view #Define que os modelos serão criados como views no banco não como tabelas físicas

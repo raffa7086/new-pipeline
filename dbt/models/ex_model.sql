@@ -1,0 +1,1 @@
+SELECT 1 AS id, 'Rafael' AS nome, CURRENT_TIMESTAMP AS criado_em;
