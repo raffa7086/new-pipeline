@@ -1,5 +1,5 @@
 # ==========================
-# 🐍 Python
+# Python
 # ==========================
 __pycache__/
 *.pyc
@@ -9,7 +9,7 @@ __pycache__/
 *.pid
 
 # ==========================
-# 🌬️ Airflow
+# Airflow
 # ==========================
 # Banco local do Airflow (SQLite)
 airflow*.db
@@ -19,7 +19,7 @@ airflow/plugins/__pycache__/
 logs/
 
 # ==========================
-# 🐳 Docker
+# Docker
 # ==========================
 *.log
 # Volumes locais (por exemplo, Postgres)
@@ -33,7 +33,7 @@ postgres_data/
 **/coverage.xml
 
 # ==========================
-# 🧠 dbt
+# dbt
 # ==========================
 dbt/target/
 dbt/dbt_packages/
@@ -41,14 +41,14 @@ dbt/dbt_packages/
 !dbt/seeds/
 
 # ==========================
-# ⚙️ VS Code / IDEs
+# VS Code / IDEs
 # ==========================
 .vscode/
 .idea/
 *.code-workspace
 
 # ==========================
-# 📦 Dados locais / Artefatos
+# Dados locais / Artefatos
 # ==========================
 data/
 .env
@@ -56,10 +56,14 @@ data/
 .env.*.local
 
 # ==========================
-# 🧹 Arquivos temporários do pipeline
+# Arquivos temporários do pipeline
 # ==========================
 dbt/vendas_temp.csv
 dbt/vendas_tratado.csv
 
-# 🧱 Arquivos gerados pela camada Bronze
+# Arquivos gerados pela camada Bronze
 dbt/bronze/*.json
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
