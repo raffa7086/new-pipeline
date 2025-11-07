@@ -1,5 +1,5 @@
 # Dependências adicionais para o Airflow
-dbt-core==1.7.8
-dbt-postgres==1.7.8
-sqlalchemy==1.4.49
-psycopg2-binary==2.9.9
+dbt-core==1.7.8 # Utilizado para transformações de dados em SQL
+dbt-postgres==1.7.8 # Exstensão do dbt para PostgreSQL
+sqlalchemy==1.4.49 # Biblioteca que o Airflow usa para interagir com bancos de dados
+psycopg2-binary==2.9.9 # É o driver Python que conecta o código Python ao banco PostgreSQL.

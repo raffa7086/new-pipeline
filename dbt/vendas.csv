@@ -1,0 +1,7 @@
+id_venda,produto,quantidade,valor_total,data_venda
+1,Notebook,2,7000,2025-11-01
+2,Mouse,5,250,2025-11-02
+3,Teclado,3,450,2025-11-02
+4,Monitor,1,1200,2025-11-03
+5,Mousepad,,50,2025-11-03
+6,Notebook,1,,2025-11-04

@@ -54,3 +54,9 @@ data/
 .env
 .env.local
 .env.*.local
+
+# ==========================
+# 🧹 Arquivos temporários do pipeline
+# ==========================
+dbt/vendas_temp.csv
+dbt/vendas_tratado.csv
