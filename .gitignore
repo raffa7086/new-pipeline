@@ -1,22 +1,56 @@
-# Python / cache
+# ==========================
+# 🐍 Python
+# ==========================
 __pycache__/
 *.pyc
-
-# Airflow
-logs/
-airflow*.db
+*.pyo
+*.pyd
+*.db
 *.pid
 
-# VS Code
-.vscode/
+# ==========================
+# 🌬️ Airflow
+# ==========================
+# Banco local do Airflow (SQLite)
+airflow*.db
+# Logs e caches
+airflow/logs/
+airflow/plugins/__pycache__/
+logs/
 
-# Docker
+# ==========================
+# 🐳 Docker
+# ==========================
 *.log
+# Volumes locais (por exemplo, Postgres)
+postgres_data/
+# Pastas temporárias que o Docker cria
+**/.pytest_cache/
+**/.mypy_cache/
+**/.tox/
+**/.coverage
+**/htmlcov/
+**/coverage.xml
 
-# dbt artefatos
+# ==========================
+# 🧠 dbt
+# ==========================
 dbt/target/
 dbt/dbt_packages/
-
-# Dados locais (evitar subir dados grandes)
-data/
+# Permite seeds versionados (CSV)
 !dbt/seeds/
+
+# ==========================
+# ⚙️ VS Code / IDEs
+# ==========================
+.vscode/
+.idea/
+*.code-workspace
+
+# ==========================
+# 📦 Dados locais / Artefatos
+# ==========================
+data/
+.env
+.env.local
+.env.*.local
