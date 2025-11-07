@@ -67,3 +67,6 @@ dbt/bronze/*.json
 # Arquivos de sistema
 .DS_Store
 Thumbs.db
+
+# Ignorar arquivo local de usuário do VSCode/dbt
+.user.yml

@@ -1,7 +1,7 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
-from bronze_capture_equities import get_commodities_df
+from bronze_capture_equities import safe_capture_equities
 
 
 default_args = {
@@ -20,4 +20,8 @@ with DAG(
     catchup=False,
     tags=["bronze", "equities", "alphavantage"],
 ) as dag:
-    pass  # vamos adicionar as tasks depois
+
+    t_capture = PythonOperator(
+        task_id="capture_and_save_equities",
+        python_callable=safe_capture_equities,
+    )
