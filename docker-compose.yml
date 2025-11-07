@@ -4,6 +4,7 @@ services:
   postgres:
     image: postgres:15
     container_name: postgres
+    restart: always
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
@@ -16,6 +17,7 @@ services:
   airflow:
     build: ./airflow
     container_name: airflow
+    restart: always
     depends_on:
       - postgres
     env_file:
@@ -26,8 +28,11 @@ services:
     ports:
       - "8080:8080"
     volumes:
+      # mantém seus DAGs e projetos sincronizados
       - ./airflow/dags:/opt/airflow/dags
       - ./dbt:/opt/airflow/dbt
+      # adiciona persistência do Airflow (banco interno, configs, usuários)
+      - airflow_data:/opt/airflow
     command: >
       bash -c "
         airflow db migrate &&
@@ -44,3 +49,4 @@ services:
 
 volumes:
   postgres_data:
+  airflow_data:
